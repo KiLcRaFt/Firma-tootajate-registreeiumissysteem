@@ -215,7 +215,6 @@
     <Content Include="Kompaania.xml" />
     <Content Include="index.php" />
     <Content Include="convert_to_json.php" />
-    <Content Include="Kompaania.json" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -437,7 +436,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63145</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44392/</IISUrl>
+          <IISUrl>http://localhost:44392/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
