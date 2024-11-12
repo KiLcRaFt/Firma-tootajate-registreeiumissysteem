@@ -13,6 +13,7 @@ if (file_exists($xmlFile)) {
     // Convert XML data into an array for easier manipulation
     $reports = [];
     foreach ($xml->Tootaja as $tootaja) {
+        ,
         $reports[] = $tootaja;
     }
 
@@ -42,6 +43,7 @@ if (file_exists($xmlFile)) {
             <th><a href="?sortColumn=palk&sortOrder=' . ($sortOrder == 'asc' ? 'desc' : 'asc') . '">Palk</a></th>
             <th>Tööpäeva algus</th>
             <th>Tööpäeva lõpp</th>
+            <th>Kuupäev</th>
           </tr>';
 
     // Display filtered data in the table
@@ -49,8 +51,8 @@ if (file_exists($xmlFile)) {
         $nimi_perenimi = strtolower((string) $tootaja->{'nimi-perenimi'});
         $amet = strtolower((string) $tootaja->amet);
         $palk = (string) $tootaja->palk;
-        $toopaev_algus = (string) $tootaja->igapäevased_andmed->toopaev_algus;
-        $toopaeva_lopp = (string) $tootaja->igapäevased_andmed->toopaev_lopp;
+        $toopaev_algus = (string) $tootaja->igapaevased_andmed->toopaev_algus;
+        $toopaeva_lopp = (string) $tootaja->igapaevased_andmed->toopaev_lopp;
 
         // Apply filters
         if (($filterRole && strpos($amet, $filterRole) === false) ||
@@ -63,8 +65,9 @@ if (file_exists($xmlFile)) {
         echo '<td>' . htmlspecialchars($tootaja->{'nimi-perenimi'}) . '</td>';
         echo '<td>' . htmlspecialchars($tootaja->amet) . '</td>';
         echo '<td>' . htmlspecialchars($tootaja->palk) . '</td>';
-        echo '<td>' . htmlspecialchars($tootaja->$igapäevased_andmed->$toopaev_algus) . '</td>';
-        echo '<td>' . htmlspecialchars($tootaja->$igapäevased_andmed->$toopaeva_lopp) . '</td>';
+        echo '<td>' . htmlspecialchars($tootaja->$igapaevased_andmed->$toopaev_algus) . '</td>';
+        echo '<td>' . htmlspecialchars($tootaja->$igapaevased_andmed->$toopaeva_lopp) . '</td>';
+        echo '<td>' . htmlspecialchars($tootaja->$igapaevased_andmed->$kuupaev) . '</td>';
         echo '</tr>';
     }
 
