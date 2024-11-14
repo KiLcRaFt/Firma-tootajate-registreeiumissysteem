@@ -22,10 +22,8 @@ namespace Firma_tootajate_registreeiumissysteem
 
         private void LoadJsonContent()
         {
-            // Путь к JSON файлу
             string filePath = Server.MapPath("~/Kompaania.json");
 
-            // Чтение JSON файла как строки
             if (File.Exists(filePath))
             {
                 JsonContent = File.ReadAllText(filePath);
