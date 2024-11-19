@@ -26,12 +26,12 @@ namespace Firma_tootajate_registreeiumissysteem
                 }
                 catch (Exception ex)
                 {
-                    XmlContent = "Ошибка при загрузке XML-файла: " + ex.Message;
+                    XmlContent = "Viga XML-faili laadimisel: " + ex.Message;
                 }
             }
             else
             {
-                XmlContent = "XML-файл не найден.";
+                XmlContent = "XML-fail ei leinud.";
             }
         }
     }

@@ -30,7 +30,7 @@ namespace Firma_tootajate_registreeiumissysteem
             }
             else
             {
-                JsonContent = "JSON файл не найден.";
+                JsonContent = "JSON fail ei leinud";
             }
         }
     }
